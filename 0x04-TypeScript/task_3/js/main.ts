@@ -6,10 +6,10 @@ const row: RowElement = {
   lastName: "Salva",
 };
 
-const newRowID: RowID = insertRow(row);
+const newRowID: RowID = CRUD.insertRow(row);
 
 // prettier-ignore
 const updatedRow: RowElement = { ...row, age: 23 };
 
-updateRow(newRowID, updatedRow);
-deleteRow(newRowID);
+CRUD.updateRow(newRowID, updatedRow);
+CRUD.deleteRow(newRowID);
