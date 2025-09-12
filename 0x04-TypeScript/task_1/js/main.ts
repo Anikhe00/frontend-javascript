@@ -23,7 +23,7 @@ interface StudentClassMethods {
 }
 
 // The actual class
-class StudentClass implements StudentClassMethods {
+class StudentClass {
   firstName: string;
   lastName: string;
 
