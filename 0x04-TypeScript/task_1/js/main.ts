@@ -11,6 +11,34 @@ interface Director extends Teacher {
   numberOfReports: number;
 }
 
+// Interface for the constructor
+interface StudentClassConstructor {
+  new (firstName: string, lastName: string): StudentClass;
+}
+
+// Interface for the class methods
+interface StudentClassMethods {
+  workOnHomework(): string;
+  displayName(): string;
+}
+
+// The actual class
+class StudentClass implements StudentClassMethods {
+  firstName: string;
+  lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  workOnHomework(): string {
+    return "Currently working";
+  }
+  displayName(): string {
+    return this.firstName;
+  }
+}
+
 const teacher3: Teacher = {
   firstName: "Adewale",
   lastName: "Ibrahim",
