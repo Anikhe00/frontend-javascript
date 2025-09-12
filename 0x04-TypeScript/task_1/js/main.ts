@@ -1,0 +1,18 @@
+interface Teacher {
+  firstName: string;
+  lastName: string;
+  fullTimeEmployee: boolean;
+  yearsOfExperience?: number;
+  location: string;
+  [key: string]: any;
+}
+
+const teacher3: Teacher = {
+  firstName: "Adewale",
+  lastName: "Ibrahim",
+  fullTimeEmployee: false,
+  location: "London",
+  contract: true,
+};
+
+console.log(teacher3);
