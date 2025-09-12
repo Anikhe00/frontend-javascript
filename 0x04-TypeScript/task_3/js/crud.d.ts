@@ -1,5 +1,5 @@
-import { RowID, RowElement } from "./interface";
+/// <reference path="./interface.ts" />
 
-export function insertRow(row: RowElement): RowID;
-export function updateRow(rowId: RowID, row: RowElement): RowID;
-export function deleteRow(rowId: RowID): void;
+declare function insertRow(row: RowElement): RowID;
+declare function updateRow(rowId: RowID, row: RowElement): RowID;
+declare function deleteRow(rowId: RowID): void;
