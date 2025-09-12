@@ -70,7 +70,8 @@ console.log(executeWork(createEmployee(1000)));
 type Subjects = "Math" | "History";
 
 //Write a function named teachClass:
-function teachClass(todayClass: Subjects) {
+// prettier-ignore
+function teachClass(todayClass:Subjects) {
   if (todayClass === "Math") {
     return "Teaching Math";
   } else {
