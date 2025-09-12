@@ -65,3 +65,18 @@ function executeWork(employee: Director | Teacher): string {
 
 console.log(executeWork(createEmployee(200)));
 console.log(executeWork(createEmployee(1000)));
+
+// Write a String literal type named Subjects allowing a variable to have the value Math or History only.
+type Subjects = "Math" | "History";
+
+//Write a function named teachClass:
+function teachClass(todayClass: Subjects) {
+  if (todayClass === "Math") {
+    return "Teaching Math";
+  } else {
+    return "Teaching History";
+  }
+}
+
+console.log(teachClass("Math"));
+console.log(teachClass("History"));

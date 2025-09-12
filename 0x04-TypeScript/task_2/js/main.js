@@ -30,11 +30,13 @@ var Teacher = /** @class */ (function () {
 }());
 // Create a function createEmployee with the following requirements:
 function createEmployee(salary) {
-    if (typeof salary === "number" && salary < 500) {
-        return new Teacher();
-    }
-    else {
-        return new Director();
+    if (typeof salary === "number") {
+        if (salary < 500) {
+            return new Teacher();
+        }
+        else {
+            return new Director();
+        }
     }
 }
 // Write a function isDirector that accepts employee as a parameter
@@ -52,3 +54,14 @@ function executeWork(employee) {
 }
 console.log(executeWork(createEmployee(200)));
 console.log(executeWork(createEmployee(1000)));
+//Write a function named teachClass:
+function teachClass(todayClass) {
+    if (todayClass === "Math") {
+        return "Teaching Math";
+    }
+    else {
+        return "Teaching History";
+    }
+}
+console.log(teachClass("Math"));
+console.log(teachClass("History"));
