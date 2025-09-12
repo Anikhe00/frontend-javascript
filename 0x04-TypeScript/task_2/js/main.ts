@@ -46,3 +46,20 @@ function createEmployee(salary: number | string): Director | Teacher {
     return new Director();
   }
 }
+
+// Write a function isDirector that accepts employee as a parameter
+function isDirector(employee: Director | Teacher): employee is Director {
+  return employee instanceof Director;
+}
+
+// Write a function executeWork that accepts employee as a parameter
+function executeWork(employee: Director | Teacher): string {
+  if (isDirector(employee)) {
+    return employee.workDirectorTasks();
+  } else {
+    return employee.workTeacherTasks();
+  }
+}
+
+console.log(executeWork(createEmployee(200)));
+console.log(executeWork(createEmployee(1000)));
