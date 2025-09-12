@@ -35,12 +35,7 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-function printTeacher({
-  firstName,
-  lastName,
-}: {
-  firstName: string;
-  lastName: string;
-}): string {
+// prettier-ignore
+function printTeacher({ firstName, lastName }: { firstName: string; lastName: string; }): string {
   return `${firstName}. ${lastName}`;
 }
