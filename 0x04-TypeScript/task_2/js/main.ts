@@ -40,15 +40,17 @@ class Teacher implements TeacherInterface {
 
 // Create a function createEmployee with the following requirements:
 function createEmployee(salary: number | string): Director | Teacher {
-  if (typeof salary === "number" && salary < 500) {
-    return new Teacher();
-  } else {
-    return new Director();
+  if (typeof salary === "number") {
+    if (salary < 500) {
+      return new Teacher();
+    } else {
+      return new Director();
+    }
   }
 }
 
 // Write a function isDirector that accepts employee as a parameter
-function isDirector(employee: Director | Teacher): employee is Director {
+export function isDirector(employee: Director | Teacher): employee is Director {
   return employee instanceof Director;
 }
 
