@@ -10,19 +10,21 @@ export const cTeacher: Subjects.Teacher = {
   experienceTeachingC: 10,
 };
 
-export const cpp: Subjects.Cpp = new Subjects.Cpp();
+const { Cpp, Java, React } = Subjects;
+
+const cpp = new Cpp();
 console.log("C++");
 cpp.setTeacher = cTeacher;
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
 
-export const java: Subjects.Java = new Subjects.Java();
+const java = new Java();
 console.log("Java");
 java.setTeacher = cTeacher;
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
 
-export const react: Subjects.React = new Subjects.React();
+export const react = new React();
 console.log("React");
 react.setTeacher = cTeacher;
 console.log(react.getRequirements());
