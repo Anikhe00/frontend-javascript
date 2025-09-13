@@ -4,9 +4,11 @@
 /// <reference path="./subjects/Java.ts" />
 /// <reference path="./subjects/React.ts" />
 
-export const cTeacher: Subjects.Teacher = {
+type Teacher = Subjects.Teacher;
+
+export const cTeacher: Teacher = {
   firstName: "Clement",
-  lastName: "N.",
+  lastName: "Ndungu",
   experienceTeachingC: 10,
 };
 
@@ -14,18 +16,18 @@ const { Cpp, Java, React } = Subjects;
 
 const cpp = new Cpp();
 console.log("C++");
-cpp.setTeacher = cTeacher;
+cpp.setTeacher(cTeacher);
 console.log(cpp.getRequirements());
 console.log(cpp.getAvailableTeacher());
 
 const java = new Java();
 console.log("Java");
-java.setTeacher = cTeacher;
+java.setTeacher(cTeacher);
 console.log(java.getRequirements());
 console.log(java.getAvailableTeacher());
 
 export const react = new React();
 console.log("React");
-react.setTeacher = cTeacher;
+react.setTeacher(cTeacher);
 console.log(react.getRequirements());
 console.log(react.getAvailableTeacher());
